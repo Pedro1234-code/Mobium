@@ -11,4 +11,9 @@ public sealed partial class About : Page
         string coreversion = CoreWebView2Environment.GetAvailableBrowserVersionString();
         VersionText.Text = $"Bluebird {appversion} (core: {coreversion})";
     }
+
+    private void SettingsBlockControl_Loaded(object sender, RoutedEventArgs e)
+    {
+
+    }
 }
