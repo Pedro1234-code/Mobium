@@ -11,15 +11,15 @@
   IgnorableNamespaces="uap mp uap3 rescap">
 
   <Identity
-    Name="57443TechFireX.BlueBirdBrowser"
-    Publisher="CN=787233D4-4D29-47D2-B29A-AD3E99C44FE7"
+    Name="MobileOSdev.MobiumBrowser"
+    Publisher="CN=70CF1695-06B3-4B57-8DCD-3788C28AED2F"
     Version="5.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="d802fa1e-c8a5-4556-8ef4-26818b13fddd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>BlueBird Browser</DisplayName>
-    <PublisherDisplayName>Bluebird Devs</PublisherDisplayName>
+    <DisplayName>Mobium Browser</DisplayName>
+    <PublisherDisplayName>MobileOSdev</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -41,7 +41,7 @@
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Bluebird"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Bluebird" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Mobium" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo"/>
             <uap:ShowOn Tile="wide310x150Logo"/>
