@@ -1,10 +1,18 @@
 <div align="center">
   <img src="src/Bluebird/Assets/Square44x44Logo.scale-200.png" height="75" width="75" />
-  <h2>Bluebird</h2>
-  <a>Your next-gen webbrowser</a>
+  <h2>Mobium</h2>
+  <a>Forked from Penguin2001's Bluebird Browser. Mobium is a WebView2 based browser made for use with MobileOS project. It's optimized for mobile and not meant to be used on desktop as it includes a mobile user agent.</a>
 </div>
 
-## Download
+## Changes:
+
+- Changed UA to Microsoft Edge Android.
+
+- Launches CoreShell when closing.
+
+- Removed "Ask AI" button because there's already a Copilot PWA in MobileOS project and it was buggy.
+
+## Bluebird Browser Download
 <a href="https://www.microsoft.com/store/productId/9PNXW61T4T0V"><img src="https://raw.githubusercontent.com/Pinguin2001/Bluebird-Browser/main/images/msstorebadge.png" /></a>
 
 ![Bluebird](images/heroimage.png)
