@@ -51,7 +51,7 @@ public sealed partial class WebViewPage : Page
             launchurl = null;
         }
         else
-            sender.Source = new Uri("https://bluebird-developers.github.io/ntp/");
+            sender.Source = new Uri("https://bing.com");
     }
 
     private void ApplyWebView2Settings(muxc.WebView2 sender)
