@@ -190,21 +190,29 @@
         <Grid CornerRadius="7">
             <muxc:WebView2
                 x:Name="WebViewControl"
+                Margin="0,63,0,0"
                 x:FieldModifier="public"
                 CoreWebView2Initialized="WebViewControl_CoreWebView2Initialized"
                 Loaded="WebViewControl_Loaded" />
         </Grid>
         <Grid
             x:Name="UrlBoxWrapper"
-            Height="32"
+            Height="43"
             MinWidth="300"
             MaxWidth="600"
-            Margin="10"
-            VerticalAlignment="Bottom"
+            Margin="10,10,10,0"
+            VerticalAlignment="Top"
             Background="{StaticResource SystemControlAcrylicElementMediumHighBrush}"
             CornerRadius="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="51*" />
+                <ColumnDefinition Width="52*" />
+            </Grid.ColumnDefinitions>
             <TextBox
                 x:Name="UrlBox"
+                Grid.ColumnSpan="2"
+                Margin="0,0,0,-4"
+                FontSize="20"
                 GotFocus="UrlBox_GotFocus"
                 IsSpellCheckEnabled="False"
                 KeyDown="UrlBox_KeyDown"
