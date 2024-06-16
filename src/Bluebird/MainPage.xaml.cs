@@ -10,7 +10,6 @@ public sealed partial class MainPage : Page
         Window.Current.SetTitleBar(CustomDragRegion);
         DataContext = ViewModels.SettingsViewModel.SettingsVM;
     }
-
     private void MoreFlyoutItem_Click(object sender, RoutedEventArgs e)
     {
         BrowserMenuFlyout.Hide();

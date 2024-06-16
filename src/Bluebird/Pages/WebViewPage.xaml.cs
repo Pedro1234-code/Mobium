@@ -27,6 +27,8 @@ public sealed partial class WebViewPage : Page
             else
                 CoreApplication.Exit();
         }
+
+
     }
 
     private void WebViewControl_CoreWebView2Initialized(muxc.WebView2 sender, muxc.CoreWebView2InitializedEventArgs args)
@@ -56,13 +58,18 @@ public sealed partial class WebViewPage : Page
     {
         sender.CoreWebView2.Settings.AreDefaultScriptDialogsEnabled = false;
         sender.CoreWebView2.Settings.UserAgent = $"{sender.CoreWebView2.Settings.UserAgent} Bluebird/{AppVersion.GetAppVersion()}";
+        sender.CoreWebView2.Settings.UserAgent = "Mozilla/5.0 (Linux; Android 10; HD1913) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.4.6478.71 Mobile Safari/537.36 EdgA/125.0.2535.87";
+        
     }
 
     private void CoreWebView2_NavigationStarting(CoreWebView2 sender, CoreWebView2NavigationStartingEventArgs args)
     {
         UrlBox.Text = args.Uri != "https://bluebird-developers.github.io/ntp/" ? args.Uri : UrlBox.Text;
         LoadingBar.Visibility = Visibility.Visible;
+
     }
+
+
 
     private async void CoreWebView2_NavigationCompleted(CoreWebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
     {

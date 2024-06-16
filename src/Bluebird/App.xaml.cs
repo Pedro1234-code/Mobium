@@ -17,7 +17,7 @@ sealed partial class App : Application
     public App()
     {
         this.InitializeComponent();
-        this.Suspending += OnSuspending;
+        this.Suspending += OnSuspendingAsync;
         LoadSettings();
         FavoritesHelper.LoadFavoritesOnStartup();
     }
@@ -33,6 +33,7 @@ sealed partial class App : Application
         else
             ViewModels.SettingsViewModel.SettingsVM.TabWidthMode = muxc.TabViewWidthMode.Equal;
     }
+
 
     protected override void OnActivated(IActivatedEventArgs args)
     {
@@ -138,11 +139,27 @@ sealed partial class App : Application
     /// </summary>
     /// <param name="sender">Die Quelle der Anhalteanforderung.</param>
     /// <param name="e">Details zur Anhalteanforderung.</param>
-    private void OnSuspending(object sender, SuspendingEventArgs e)
+    private async void OnSuspendingAsync(object sender, SuspendingEventArgs e)
     {
         var deferral = e.SuspendingOperation.GetDeferral();
         //TODO: Anwendungszustand speichern und alle Hintergrundaktivitäten beenden
         deferral.Complete();
+
+        var packageFamilyName = "MobileOSDev.CoreShell_d7x680j9yw8bm";
+        var pm = new Windows.Management.Deployment.PackageManager();
+        var packages = pm.FindPackagesForUser(string.Empty, packageFamilyName);
+
+        var foundPackage = packages.FirstOrDefault();
+        if (foundPackage != null)
+        {
+            var appListEntries = await foundPackage.GetAppListEntriesAsync();
+            var entry = appListEntries.FirstOrDefault();
+            if (entry != null)
+            {
+                bool success = await entry.LaunchAsync();
+            }
+        }
+
     }
 
     /// <summary>
