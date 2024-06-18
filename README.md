@@ -12,7 +12,7 @@
 
 - Removed "Ask AI" button because there's already a Copilot PWA in MobileOS project and it was buggy.
 
-![Bluebird](images/heroimage.png)
+![image](https://github.com/Pedro1234-code/Mobium/assets/78425126/20747c5f-38c9-4887-ba21-84bd63546f0a)
 
 ## Features:
 - Blazingly fast
