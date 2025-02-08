@@ -12,7 +12,7 @@
   <Identity
     Name="MobileOSdev.MobiumBrowser"
     Publisher="CN=70CF1695-06B3-4B57-8DCD-3788C28AED2F"
-    Version="5.0.0.0" />
+    Version="5.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="d802fa1e-c8a5-4556-8ef4-26818b13fddd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

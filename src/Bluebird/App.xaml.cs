@@ -76,7 +76,7 @@ sealed partial class App : Application
     /// werden z. B. verwendet, wenn die Anwendung gestartet wird, um eine bestimmte Datei zu öffnen.
     /// </summary>
     /// <param name="e">Details über Startanforderung und -prozess.</param>
-    protected override void OnLaunched(LaunchActivatedEventArgs e)
+    protected override void OnLaunchedAsync(LaunchActivatedEventArgs e)
     {
         Frame rootFrame = Window.Current.Content as Frame;
 
